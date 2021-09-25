@@ -5,7 +5,7 @@ function pelicula(props) {
       <div className="mv-item-infor">
         <h6>
           <a href="moviesingle.html">
-            {props.title} <span>(2012)</span>
+            {props.title} <span>{props.año}</span>
           </a>
         </h6>
         <p className="rate">
@@ -21,7 +21,8 @@ function pelicula(props) {
           <span>Release: {props.fecha}</span>
         </p>
         <p>
-          Director: <a href="#">{props.director}</a>
+          Director: <a href="#">{props.director1}</a>
+          <a href="#">{props.director2}</a>
         </p>
         <p>
           Stars: <a href="#">{props.actor1},</a>{" "}
