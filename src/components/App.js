@@ -1,8 +1,10 @@
 import PageWrapper from '../components/pageWrapper';
 import Pelicula from './peliculas';
+import PeliculasJson from '../peliculas.json';
+import Paginacion from '../components/paginacion'
 
 function App() {
-  let peliculas = ''
+  let peliculas = PeliculasJson;
 
   return (
     <PageWrapper>
@@ -24,7 +26,12 @@ function App() {
           </Pelicula>
         )
       })}
-     
+
+      <Paginacion
+        pagina={1}
+        total={4}
+        onChange={(pagina)=>{alert(pagina)}}
+      />
     </PageWrapper>
   );
 }
